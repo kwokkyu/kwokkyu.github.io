@@ -70,6 +70,58 @@ div.github-container {
     color: black;
 }
 
+/* Home and About */
+div.home-container, div.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p.home-paragraph, p.about-paragraph {
+    flex: 1;
+    margin: 0 10%;
+    font-family: "Arial Black", Helvetica, sans-serif, ui-sans-serif;
+    font-size: large;
+}
+
+/* Projects */
+.this-website-img-container {
+    grid-area: this-website-img;
+}
+
+.this-website-description-container {
+    grid-area: this-website-description;
+}
+
+.piechart-container {
+    grid-area: piechart;
+}
+
+.piechart-description-container {
+    grid-area: piechart-description;
+}
+
+div.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3%;
+    grid-template-areas: 
+        "this-website-img this-website-description"
+        "piechart piechart-description";
+}
+
+.this-website-description-container, .piechart-description-container {
+    font-family: "Arial Black", Helvetica, sans-serif, ui-sans-serif;
+    font-size: large;
+    margin-left: 15%;
+}
+
+#this-website-img, #piechart {
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .menu-horizontal a:not(:first-child) {
@@ -124,38 +176,12 @@ div.github-container {
     .menu-vertical a:hover {
         color: grey;
     }
-}
 
-/* Home and About */
-div.home-container, div.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-p.home-paragraph, p.about-paragraph {
-    flex: 1;
-    margin: 0 10%;
-    font-family: "Arial Black", Helvetica, sans-serif, ui-sans-serif;
-    font-size: large;
-}
-
-/* Projects */
-div.projects-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3%;
-    padding-bottom: 15%;
-}
-
-.this-website-description-container, .piechart-description-container {
-    font-family: "Arial Black", Helvetica, sans-serif, ui-sans-serif;
-    font-size: large;
-    margin-left: 15%;
-}
-
-#this-website-img, #piechart {
-    margin-top: 10%;
-    margin-left: 10%;
+    div.projects-container {
+        grid-template-areas:
+            "this-website-img"
+            "this-website-description"
+            "piechart"
+            "piechart-description";
+    }
 }

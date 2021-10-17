@@ -123,7 +123,7 @@ div.projects-container {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .menu-horizontal a:not(:first-child) {
         display: none;
     }
@@ -138,7 +138,7 @@ div.projects-container {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .menu-vertical {
         position: relative;
     }

@@ -1,0 +1,54 @@
+html, body, #view {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(105, 105, 105, 0.5);
+    color: white;
+    overflow: auto;
+    z-index: 50;
+}
+
+#panel-span {
+    display: inline-block;
+}
+
+#panel-heading {
+    padding: 5px;
+    margin: 10px 10px 0 15px;
+}
+
+#panel ul {
+    list-style: none;
+}
+
+#panel li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#panel li:hover, #panel li:focus {
+    color: orange;
+}
+
+.esri-widget {
+    background-color: rgba(105, 105, 105, 0.5);
+    color: white;
+}
+
+.esri-widget__heading {
+    color: white;
+}
+
+.esri-widget__table {
+    color: white;
+}

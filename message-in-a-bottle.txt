@@ -1,0 +1,10 @@
+<h2>Project Overview</h2>
+<p>This project calculates and visualizes the travelling path of a bottle with a message by getting user inputs of the starting point at the ocean and the number of days the bottle will travel.</p>
+<h2>Project Highlights</h2>
+<ul>
+    <li>Utilized the Geoprocessor to calculate the travelling path of the bottle.</li>
+    <li>Created a customized 3D bottle symbol.</li>
+    <li>Captured the user input of the starting point from the SceneView.</li>
+    <li>Visualized the bottle and the travelling path on a GraphicsLayer.</li>
+    <li>Customized the styles of ESRI widgets.</li>
+</ul>

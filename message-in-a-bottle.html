@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Message in a Bottle</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="css/message-in-a-bottle.css">
+    <script src="https://js.arcgis.com/4.8/"></script>
+    <script src="js/message-in-a-bottle.js" async></script>
+  </head>
+  <body>
+    <div id="view"></div>
+    <div id="panel" class="esri-widget">
+      <span id="panel-span">
+        <h2 id="panel-heading">Message in a Bottle</h2>
+      </span>
+      <button id="instructions-button">?</button>
+      <p id="instructions"></p>
+      <label for="days" id="days-label">Travelling Days:</label>
+      <input type="text" id="days" name="days"><br>
+      <button id="calculate-path">Calculate Path</button>
+      <button id="start-over">Start Over</button>
+      <p id="message"></p>
+    </div>
+  </body>
+</html>

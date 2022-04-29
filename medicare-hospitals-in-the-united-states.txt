@@ -1,0 +1,11 @@
+<h2>Project Overview</h2>
+<p>This project visualizes hospitals that are registered with Medicare in the United States.</p>
+<h2>Project Highlights</h2>
+<ul>
+    <li>Used SimpleMarkerSymbol to symbolize hospitals.</li>
+    <li>Utilized a UniqueValueRenderer to render the different types of hospitals.</li>
+    <li>Configured popups to show detailed hospital information.</li>
+    <li>Filtered data on the FeatureLayerView.</li>
+    <li>Shifted focus to the selected state or region after user selection.</li>
+    <li>Added the Home, Legend, and ScaleBar ESRI widgets.</li>
+</ul>

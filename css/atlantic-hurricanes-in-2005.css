@@ -52,3 +52,8 @@ html, body, #view {
 .esri-widget__table {
     color: white;
 }
+
+.esri-widget--button {
+    background-color: rgba(105, 105, 105, 0.5);
+    color: white;
+}

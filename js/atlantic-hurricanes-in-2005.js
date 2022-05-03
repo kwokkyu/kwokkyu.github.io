@@ -9,9 +9,10 @@ require(
         "esri/layers/FeatureLayer",
         "esri/layers/support/FeatureFilter",
         "esri/widgets/Home",
-        "esri/widgets/Legend"
+        "esri/widgets/Legend",
+        "esri/widgets/Expand"
     ],
-    (Map, SceneView, SimpleLineSymbol, SimpleRenderer, FeatureLayer, FeatureFilter, Home, Legend) => {
+    (Map, SceneView, SimpleLineSymbol, SimpleRenderer, FeatureLayer, FeatureFilter, Home, Legend, Expand) => {
         const lineSymbol = new SimpleLineSymbol({
             width: 3,
             style: "solid"
@@ -121,12 +122,18 @@ require(
             ]
         });
 
+        const legendExpand = new Expand({
+            view: view,
+            content: legend,
+            expandIconClass: "esri-icon-legend"
+        });
+
         view.when(() => {
             view.ui.add(home, {
                 position: "top-left"
             });
 
-            view.ui.add(legend, {
+            view.ui.add(legendExpand, {
                 position: "bottom-left"
             });
 

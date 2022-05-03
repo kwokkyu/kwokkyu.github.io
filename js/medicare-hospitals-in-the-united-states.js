@@ -10,9 +10,10 @@ require(
         "esri/layers/support/FeatureFilter",
         "esri/widgets/Home",
         "esri/widgets/Legend",
-        "esri/widgets/ScaleBar"
+        "esri/widgets/ScaleBar",
+        "esri/widgets/Expand"
     ],
-    (Map, MapView, SimpleMarkerSymbol, UniqueValueRenderer, FeatureLayer, FeatureFilter, Home, Legend, ScaleBar) => {
+    (Map, MapView, SimpleMarkerSymbol, UniqueValueRenderer, FeatureLayer, FeatureFilter, Home, Legend, ScaleBar, Expand) => {
         const uniqueHospitalTypeValueInfos = [];
 
         function createUniqueHospitalTypeValueInfo(type, color) {
@@ -93,6 +94,12 @@ require(
             ]
         });
 
+        const legendExpand = new Expand({
+            view: view,
+            content: legend,
+            expandIconClass: "esri-icon-legend"
+        });
+
         const scaleBar = new ScaleBar({
             view: view,
             style: "line",
@@ -104,7 +111,7 @@ require(
                 position: "top-left"
             });
 
-            view.ui.add(legend, {
+            view.ui.add(legendExpand, {
                 position: "top-right"
             });
 

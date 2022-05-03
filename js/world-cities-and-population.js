@@ -112,6 +112,12 @@ require(
             ]
         });
 
+        const legendExpand = new Expand({
+            view: view,
+            content: legend,
+            expandIconClass: "esri-icon-legend"
+        });
+
         const scaleBar = new ScaleBar({
             view: view,
             style: "line",
@@ -133,7 +139,7 @@ require(
                 position: "top-left"
             });
 
-            view.ui.add(legend, {
+            view.ui.add(legendExpand, {
                 position: "top-right"
             });
 

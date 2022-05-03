@@ -66,8 +66,20 @@ require(
                 position: "top-left"
             });
 
-            const panel = document.querySelector("#panel");
-            view.ui.add(panel, "bottom-right");
+            const maximizeButton = document.querySelector("#maximize-button");
+            view.ui.add(maximizeButton, "bottom-right");
+
+            document.querySelector("#maximize-button").addEventListener("click", (event) => {
+                event.target.style.display = "none";
+                document.querySelector("#panel").style.display = "block";
+                view.ui.add(panel, "bottom-right");
+            });
+
+            document.querySelector("#minimize-button").addEventListener("click", (event) => {
+                document.querySelector("#panel").style.display = "none";
+                document.querySelector("#maximize-button").style.display = "block";
+                view.ui.add(maximizeButton, "bottom-right");
+            });
 
             document.querySelector("#instructions-button").addEventListener("click", (event) => {
                 const instructionButton = document.querySelector("#instructions-button");
@@ -150,6 +162,7 @@ require(
                         document.querySelector("#calculate-path").disabled = true;
                         message.innerHTML = "";
                     }).catch((error) => {
+                        message.innerHTML = "Error occurred. Please try again.";
                         console.error(error);
                     });
                 }

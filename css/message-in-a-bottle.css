@@ -6,6 +6,7 @@ html, body, #view {
 }
 
 #panel {
+    display: none;
     width: 300px;
     background-color: rgba(105, 105, 105, 0.5);
 }
@@ -16,15 +17,16 @@ html, body, #view {
 
 #panel-heading {
     color: white;
-    padding: 5px 40px 5px 20px;
+    padding: 5px 10px 5px 20px;
 }
 
-#instructions-button {
+#instructions-button, #minimize-button, #maximize-button {
     border: none;
     background-color: rgba(105, 105, 105, 0.5);
     color: white;
     padding: 5px 10px;
     font-size: large;
+    font-weight: 700;
 }
 
 #instructions {

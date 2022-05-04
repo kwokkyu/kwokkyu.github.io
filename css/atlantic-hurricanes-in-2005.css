@@ -57,3 +57,13 @@ html, body, #view {
     background-color: rgba(105, 105, 105, 0.5);
     color: white;
 }
+
+.esri-home {
+    top: 15px;
+    left: 50px;
+}
+
+.esri-expand {
+    top: 47px;
+    left: 50px;
+}

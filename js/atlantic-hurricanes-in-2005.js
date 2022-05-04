@@ -130,11 +130,11 @@ require(
 
         view.when(() => {
             view.ui.add(home, {
-                position: "top-left"
+                position: "manual"
             });
 
             view.ui.add(legendExpand, {
-                position: "bottom-left"
+                position: "manual"
             });
 
             const fragment = document.createDocumentFragment();

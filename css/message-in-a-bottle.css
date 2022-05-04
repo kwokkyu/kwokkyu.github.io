@@ -24,16 +24,9 @@ html, body, #view {
     border: none;
     background-color: rgba(105, 105, 105, 0.5);
     color: white;
+    padding: 5px 10px;
     font-size: large;
     font-weight: 700;
-}
-
-#instructions-button {
-    padding: 5px 10px;
-}
-
-#minimize-button, #maximize-button {
-    padding: 2px 7px 5px 7px;
 }
 
 #instructions {

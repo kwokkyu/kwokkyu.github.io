@@ -17,7 +17,7 @@ html, body, #view {
 
 #panel-heading {
     color: white;
-    padding: 5px 10px 5px 20px;
+    padding: 5px 50px 5px 20px;
 }
 
 #instructions-button, #minimize-button, #maximize-button {
@@ -74,4 +74,23 @@ html, body, #view {
 
 .esri-widget__heading {
     color: white;
+}
+
+.esri-home {
+    top: 15px;
+    left: 50px;
+}
+
+#instructions-button {
+    display: none;
+}
+
+@media (min-width: 500px) {
+    #instructions-button {
+        display: inline-block;
+    }
+
+    #panel-heading {
+        padding: 5px 10px 5px 20px;
+    }
 }

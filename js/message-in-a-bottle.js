@@ -63,7 +63,7 @@ require(
 
         view.when(() => {
             view.ui.add(home, {
-                position: "top-left"
+                position: "manual"
             });
 
             const maximizeButton = document.querySelector("#maximize-button");

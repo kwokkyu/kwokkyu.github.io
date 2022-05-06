@@ -108,7 +108,7 @@ require(
 
         view.when(() => {
             view.ui.add(home, {
-                position: "top-left"
+                position: "top-right"
             });
 
             view.ui.add(legendExpand, {
@@ -116,7 +116,7 @@ require(
             });
 
             view.ui.add(scaleBar, {
-                position: "bottom-left"
+                position: "bottom-right"
             });
 
             view.ui.add(document.querySelector("#select-wrapper"), {
@@ -143,6 +143,15 @@ require(
             }
 
             function filterHospitals(view, hospitalsLayer, whereClause) {
+                const hospitalsQuery = hospitalsLayer.createQuery();
+                hospitalsQuery.where = whereClause;
+
+                hospitalsLayer.queryFeatureCount(hospitalsQuery).then((count) => {
+                    if (count == 0) {
+                        document.querySelector("#no-data-modal").style.display = "block";
+                    }
+                });
+
                 view.whenLayerView(hospitalsLayer).then((hospitalsLayerView) => {
                     hospitalsLayerView.filter = new FeatureFilter({
                         where: whereClause
@@ -191,6 +200,10 @@ require(
                     console.error(error);
                 });
             }
+
+            document.querySelector("#no-data-modal-ok").addEventListener("click", (event) => {
+                document.querySelector("#no-data-modal").style.display = "none";
+            });
 
             document.querySelector("#state-select").addEventListener("change", (event) => {
                 const whereClause = buildWhereClause(event.target.value, document.querySelector("#hospital-type-select").value);

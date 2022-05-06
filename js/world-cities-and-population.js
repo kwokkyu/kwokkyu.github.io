@@ -136,7 +136,7 @@ require(
 
         view.when(() => {
             view.ui.add(home, {
-                position: "top-left"
+                position: "top-right"
             });
 
             view.ui.add(legendExpand, {
@@ -144,7 +144,7 @@ require(
             });
 
             view.ui.add(scaleBar, {
-                position: "bottom-left"
+                position: "bottom-right"
             });
 
             view.ui.add(basemapGalleryExpand, {

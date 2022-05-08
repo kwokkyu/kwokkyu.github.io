@@ -66,8 +66,8 @@ require(
                 position: "manual"
             });
 
-            const maximizeButton = document.querySelector("#maximize-button");
-            view.ui.add(maximizeButton, "bottom-right");
+            const panel = document.querySelector("#panel");
+            view.ui.add(panel, "bottom-right");
 
             document.querySelector("#maximize-button").addEventListener("click", (event) => {
                 event.target.style.display = "none";
@@ -78,6 +78,7 @@ require(
             document.querySelector("#minimize-button").addEventListener("click", (event) => {
                 document.querySelector("#panel").style.display = "none";
                 document.querySelector("#maximize-button").style.display = "block";
+                const maximizeButton = document.querySelector("#maximize-button");
                 view.ui.add(maximizeButton, "bottom-right");
             });
 

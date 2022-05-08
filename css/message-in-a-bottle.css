@@ -6,7 +6,6 @@ html, body, #view {
 }
 
 #panel {
-    display: none;
     width: 300px;
     background-color: rgba(105, 105, 105, 0.5);
 }
@@ -27,6 +26,10 @@ html, body, #view {
     padding: 5px 10px;
     font-size: large;
     font-weight: 700;
+}
+
+#maximize-button {
+    display: none;
 }
 
 #instructions {

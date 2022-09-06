@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-areas:
+        "topskills"
+        "skills";
+    grid-template-rows: 30% minmax(auto, 70%);
+    text-align: center;
+}
+
+.top-skills {
+    grid-area: topskills;
+    display: grid;
+}
+
+.top-skills-text {
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 6vw;
+}
+
+.skills {
+    grid-area: skills;
+    display: grid;
+    grid-template-areas:
+        "html5css3 javascript git github";
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+}
+
+.html5-css3 {
+    grid-area: html5css3;
+    margin: 10% 5% 15% 15%;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.html5-css3 img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.javascript {
+    grid-area: javascript;
+    margin: 15%;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.javascript img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.git {
+    grid-area: git;
+    margin: 15% 5% 15% 5%;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.git img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.github {
+    grid-area: github;
+    margin: 15% 15% 15% 5%;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.github img {
+    width: 100%;
+    max-height: 100%;
+}
+
+@media (min-width: 1024px) {
+    .top-skills-text {
+        font-size: 5vw;
+    }
+
+    .html5-css3 {
+        margin: 0 5% 15% 0;
+    }
+
+    .javascript {
+        margin: 5% 0 15% 0%;
+    }
+
+    .git {
+        margin: 0 10% 15% 10%;
+    }
+
+    .github {
+        margin: 0 10% 15% 10%;
+    }
+
+    .html5-css3 img {
+        margin: 0% 0% 0% 20%;
+        width: 80%;
+        height: 80%;
+    }
+
+    .javascript img {
+        margin: 5% 0% 40% 0%;
+        width: 75%;
+        height: 55%;
+    }
+
+    .git img {
+        margin: 30% 0% 30% 0%;
+        width: 100%;
+        height: 40%;
+    }
+
+    .github img {
+        margin: 15% 40% 40% 5%;
+        width: 90%;
+        height: 60%;
+    }
+}

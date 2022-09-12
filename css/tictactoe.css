@@ -38,12 +38,20 @@ body {
     text-decoration: none;
 }
 
+.top-bar {
+    grid-area: topbar;
+}
+
 .left-sidebar {
     grid-area: leftsidebar;
 }
 
 .right-sidebar {
     grid-area: rightsidebar;
+}
+
+.bottom-bar {
+    grid-area: bottombar;
 }
 
 .footer {
@@ -195,10 +203,10 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 500px) {
     .container {
         grid-template-columns: 35% 30% 35%;
-        grid-template-rows: 33% 46% 21%;
+        grid-template-rows: 33% 47% 20%;
     }
 
     .game-title {
@@ -210,11 +218,35 @@ body {
     }
 
     .cell-content {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 
     #reset-button {
         width: 16vw;
         font-size: 1vw;
+    }
+}
+
+@media (max-height: 600px) {
+    .container {
+        grid-template-areas:
+            "header topbar topbar topbar"
+            "header leftsidebar gameboard rightsidebar"
+            "footer leftsidebar gameboard rightsidebar"
+            "footer bottombar bottombar bottombar";
+        grid-template-columns: 52% 8% 32% 8%;
+        grid-template-rows: 8% 52% 32% 8%;
+    }
+
+    .game-title {
+        font-size: 6vw;
+    }
+
+    .status {
+        font-size: 3vw;
+    }
+
+    .cell-content {
+        font-size: 5vw;
     }
 }

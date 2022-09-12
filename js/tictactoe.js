@@ -22,7 +22,7 @@ class TicTacToe {
     }
 
     declareTiedGame() {
-        document.getElementById("status-text").innerHTML = "Tied";
+        document.getElementById("status-text").innerHTML = "Tie";
         document.getElementById("token").innerHTML = "";
         this.#gameEnded = true;
     }

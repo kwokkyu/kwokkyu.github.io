@@ -37,8 +37,8 @@ body {
     grid-area: skills;
     display: grid;
     grid-template-areas:
-        "html5css3 javascript git github";
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+        "html5css3 typescript javascript git github";
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 100%;
 }
 
@@ -51,6 +51,19 @@ body {
 }
 
 .html5-css3 img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.typescript {
+    grid-area: typescript;
+    margin: 15%;
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+.typescript img {
     width: 100%;
     max-height: 100%;
 }
@@ -103,6 +116,10 @@ body {
         margin: 0 5% 15% 0;
     }
 
+    .typescript {
+        margin: 5% 0 15% 0%;
+    }
+
     .javascript {
         margin: 5% 0 15% 0%;
     }
@@ -121,6 +138,12 @@ body {
         height: 80%;
     }
 
+    .typescript img {
+        margin: 5% 0% 40% 0%;
+        width: 75%;
+        height: 55%;
+    }
+    
     .javascript img {
         margin: 5% 0% 40% 0%;
         width: 75%;
